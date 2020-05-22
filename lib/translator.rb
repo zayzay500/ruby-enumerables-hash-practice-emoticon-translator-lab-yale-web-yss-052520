@@ -43,15 +43,15 @@ def get_english_meaning (file_path, j_emoticon)
   # code goes here
   library = load_library(file_path)
   
-  library.each_with_object("") do |(meaning, symbols), answer|
+  answer = library.each_with_object("") do |(meaning, symbols), a|
     if symbols[:japanese] == j_emoticon
-      answer << meaning
+      a << meaning
     end
   end
   
   binding.pry
   
-  if meaning.empty?
-    meaning = "Sorry, that emoticon was not found"
+  if answer.empty?
+    answer = "Sorry, that emoticon was not found"
   end
 end
