@@ -49,4 +49,5 @@ def get_english_meaning (file_path, j_emoticon)
     end
   end
   
+  if meaning.
 end
