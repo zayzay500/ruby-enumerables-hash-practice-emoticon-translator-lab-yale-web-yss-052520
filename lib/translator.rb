@@ -50,8 +50,6 @@ def get_english_meaning (file_path, j_emoticon)
   end
   
   if meaning.empty?
-    "Sorry, that emoticon was not found"
-  else
-    
+    meaning = "Sorry, that emoticon was not found"
   end
 end
