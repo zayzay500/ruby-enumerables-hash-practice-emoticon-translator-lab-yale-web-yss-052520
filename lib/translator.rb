@@ -43,11 +43,13 @@ def get_english_meaning (file_path, j_emoticon)
   # code goes here
   library = load_library(file_path)
   
-  meaning_array = library.select do |meaning, symbols|
-    symbols[:japanese] == j_emoticon
+  library.each_with_object do |(meaning, symbols), answer|
+    if symbols[:japanese] == j_emoticon
+      answer << meaning
+    end
   end
   # binding.pry
   
-  meaning_array.first[0]
+  meaning.first
   # binding.pry
 end
