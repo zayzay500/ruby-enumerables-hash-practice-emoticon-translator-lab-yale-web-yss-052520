@@ -49,5 +49,9 @@ def get_english_meaning (file_path, j_emoticon)
     end
   end
   
-  if meaning.
+  if meaning.empty?
+    "Sorry, that emoticon was not found"
+  else
+    
+  end
 end
