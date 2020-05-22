@@ -49,7 +49,7 @@ def get_english_meaning (file_path, j_emoticon)
     end
   end
   
-  binding.pry
+  # binding.pry
   
   if answer.empty?
     answer = "Sorry, that emoticon was not found"
