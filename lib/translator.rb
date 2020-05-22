@@ -40,7 +40,7 @@ def get_japanese_emoticon (file_path, e_emoticon)
   answer = library.each_with_object("") do |(meaning, symbols), a|
     
     if symbols[:english] == e_emoticon
-      a << symbols[japanese]
+      a << symbols[:japanese]
     end
   end
   
